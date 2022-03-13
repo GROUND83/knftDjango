@@ -13,7 +13,11 @@ import os, environ
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+env = environ.Env(
+    DEBUG=(bool, False),
+)  # 기본 값
 environ.Env.read_env(env_file=os.path.join(BASE_DIR, ".env"))
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
@@ -21,7 +25,7 @@ environ.Env.read_env(env_file=os.path.join(BASE_DIR, ".env"))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-=)uv+x+a(43(n*&xr8tb4lhkp2f+mf-syp6d(%@x57*#a*g4@3"
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 env = environ.Env(
