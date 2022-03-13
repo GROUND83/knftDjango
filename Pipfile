@@ -5,6 +5,15 @@ name = "pypi"
 
 [packages]
 django = "*"
+pillow = "*"
+django-ckeditor = "*"
+pilkit = "*"
+django-imagekit = "*"
+imgpy = "*"
+moviepy = "*"
+python-magic = "*"
+libmagic = "*"
+django-environ = "*"
 
 [dev-packages]
 
