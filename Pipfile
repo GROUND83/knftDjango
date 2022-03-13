@@ -13,7 +13,10 @@ imgpy = "*"
 moviepy = "*"
 python-magic = "*"
 libmagic = "*"
-django-environ = "*"
+gunicorn = "*"
+boto3 = "*"
+psycopg2-binary = "*"
+django-storages = "*"
 
 [dev-packages]
 
